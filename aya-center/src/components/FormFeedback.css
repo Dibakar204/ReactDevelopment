@@ -1,0 +1,36 @@
+.form-feedback {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.form-feedback--success {
+  background: rgba(125, 155, 118, 0.15);
+  color: var(--color-forest);
+}
+
+.form-feedback--error {
+  background: rgba(184, 92, 92, 0.12);
+  color: #8b3a3a;
+}
+
+.form-feedback--loading {
+  color: var(--color-text-muted);
+}
+
+.contact__submit:disabled,
+.footer__form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

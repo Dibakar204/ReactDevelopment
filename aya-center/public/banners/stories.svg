@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="story-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a6b55"/>
+      <stop offset="60%" stop-color="#2d4a3e"/>
+      <stop offset="100%" stop-color="#1a2e26"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="480" fill="url(#story-bg)"/>
+  <ellipse cx="720" cy="480" rx="500" ry="200" fill="#3d5c4a" opacity="0.5"/>
+  <circle cx="900" cy="200" r="100" fill="#c4a35a" opacity="0.12"/>
+  <circle cx="900" cy="200" r="60" fill="#e8d4a8" opacity="0.08"/>
+  <ellipse cx="300" cy="350" rx="80" ry="120" fill="#7d9b76" opacity="0.25" transform="rotate(-15 300 350)"/>
+  <ellipse cx="350" cy="340" rx="60" ry="90" fill="#8fad87" opacity="0.2" transform="rotate(-10 350 340)"/>
+  <path d="M100 400 Q200 320 350 380 T600 360" stroke="#a8c4a0" stroke-width="2" fill="none" opacity="0.3"/>
+  <circle cx="150" cy="120" r="2" fill="#faf6f0" opacity="0.5"/>
+  <circle cx="200" cy="90" r="2" fill="#e8d4a8" opacity="0.4"/>
+  <circle cx="1200" cy="150" r="2" fill="#faf6f0" opacity="0.4"/>
+  <path d="M500 250 Q520 220 540 250 Q560 280 580 250" stroke="#c4a35a" stroke-width="2" fill="none" opacity="0.35"/>
+</svg>

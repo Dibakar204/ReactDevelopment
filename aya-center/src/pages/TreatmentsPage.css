@@ -1,0 +1,156 @@
+.treatments-page {
+  background: var(--color-white);
+  padding-block: var(--section-padding);
+}
+
+.treatments-page__intro {
+  text-align: center;
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  max-width: 58ch;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.treatments-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.treatment-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--color-cream);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(45, 74, 62, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(125, 155, 118, 0.35);
+}
+
+.treatment-card__tag {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  background: rgba(184, 125, 92, 0.12);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+}
+
+.treatment-card__icon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.treatment-card__name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  margin-bottom: 0.5rem;
+}
+
+.treatment-card__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.treatment-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+  border-top: 1px solid rgba(45, 74, 62, 0.1);
+}
+
+.treatment-card__duration {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.treatment-card__price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.treatment-card__book {
+  width: 100%;
+  margin-top: auto;
+}
+
+.treatments-page__footer {
+  padding-block: var(--section-padding);
+}
+
+.treatments-page__footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.treatments-page__footer-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.treatments-page__footer-text .page-extras__lead {
+  margin-inline: 0;
+  text-align: left;
+}
+
+.treatments-page__footer-text .page-extras__title {
+  text-align: left;
+}
+
+.treatments-page__footer .btn-primary {
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .treatments-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .treatments-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treatments-page__footer-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .treatments-page__footer-text .page-extras__title,
+  .treatments-page__footer-text .page-extras__lead {
+    text-align: center;
+  }
+
+  .treatments-page__footer .btn-primary {
+    width: 100%;
+  }
+}

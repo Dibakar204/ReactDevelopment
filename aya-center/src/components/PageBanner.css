@@ -1,0 +1,107 @@
+.page-banner {
+  position: relative;
+  padding-top: calc(var(--header-height) + 3rem);
+  padding-bottom: 3.5rem;
+  background: linear-gradient(160deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
+  overflow: hidden;
+}
+
+.page-banner--image {
+  min-height: 340px;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(45, 74, 62, 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.page-banner--image .page-banner__bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(26, 46, 38, 0.88) 0%,
+    rgba(26, 46, 38, 0.65) 45%,
+    rgba(45, 74, 62, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.page-banner__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  margin-bottom: 1.25rem;
+}
+
+.page-banner__breadcrumb a {
+  color: var(--color-sage);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.page-banner--image .page-banner__breadcrumb a {
+  color: var(--color-gold-light);
+}
+
+.page-banner--image .page-banner__breadcrumb a:hover {
+  color: var(--color-white);
+}
+
+.page-banner__breadcrumb a:hover {
+  color: var(--color-forest);
+}
+
+.page-banner__breadcrumb span:last-child {
+  color: var(--color-text-muted);
+}
+
+.page-banner--image .page-banner__breadcrumb span:last-child {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.page-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--color-forest);
+  margin-bottom: 0.75rem;
+  max-width: 20ch;
+}
+
+.page-banner--image .page-banner__title {
+  color: var(--color-white);
+}
+
+.page-banner--image .section-label {
+  color: var(--color-gold-light);
+}
+
+.page-banner__desc {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+}
+
+.page-banner--image .page-banner__desc {
+  color: rgba(255, 255, 255, 0.85);
+}
