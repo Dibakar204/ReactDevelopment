@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import EnquireModal from './EnquireModal'
 import './Header.css'
 
@@ -15,6 +15,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [enquireOpen, setEnquireOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -37,7 +38,11 @@ export default function Header() {
 
   return (
     <>
-      <header className={`header ${scrolled ? 'header--scrolled' : ''} ${menuOpen ? 'header--menu-open' : ''}`}>
+      <header className={`header ${scrolled ? 'header--scrolled' : ''} ${menuOpen ? 'header--menu-open' : ''}`}
+        style={{
+          backgroundColor:
+            location.pathname === "/" ? "transparent" : "#ccccccc7",
+        }}>
         <div className="container header__inner">
           <Link to="/" className="header__logo" onClick={closeMenu}>
             <span className="header__logo-icon" aria-hidden="true">🌿</span>
