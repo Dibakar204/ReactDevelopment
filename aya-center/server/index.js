@@ -1,40 +1,9 @@
-import dotenv from 'dotenv'
-import path from 'path'
-import { fileURLToPath } from 'url'
 import express from 'express'
 import cors from 'cors'
-import nodemailer from 'nodemailer'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-dotenv.config({ path: path.resolve(__dirname, '..', '.env') })
+import { isValidEmail, sendMail, escapeHtml } from '../email.js'
 
 const app = express()
 const PORT = process.env.PORT || 3001
-
-const MAIL_TO = process.env.MAIL_TO || 'dibakar.sarkar.402@gmail.com'
-const SMTP_USER = process.env.SMTP_USER?.trim()
-const SMTP_PASS = process.env.SMTP_PASS?.replace(/\s/g, '')
-
-if (!SMTP_USER || !SMTP_PASS) {
-  console.warn(
-    '\n⚠️  Missing SMTP_USER or SMTP_PASS in .env — emails will not send.\n' +
-      '   Copy .env.example → .env and add your Gmail App Password.\n' +
-      '   Then restart: npm run dev\n',
-  )
-}
-
-const transporter =
-  SMTP_USER && SMTP_PASS
-    ? nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-          user: SMTP_USER,
-          pass: SMTP_PASS,
-        },
-      })
-    : null
 
 app.use(cors({ origin: true }))
 app.use(express.json())
