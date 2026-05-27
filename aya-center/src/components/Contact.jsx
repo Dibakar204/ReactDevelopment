@@ -65,14 +65,14 @@ export default function Contact({ hideHeader = false }) {
               <span className="contact__icon" aria-hidden="true">📍</span>
               <div>
                 <strong>Location</strong>
-                <p>124 Serenity Lane, Wellness District</p>
+                <p>Jagadishpur, Chamrail, Howrah, West Bengal 711114, India</p>
               </div>
             </li>
             <li>
               <span className="contact__icon" aria-hidden="true">📞</span>
               <div>
                 <strong>Phone</strong>
-                <p>+1 (555) 234-AYUR</p>
+                <p>+91 8910645639</p>
               </div>
             </li>
             <li>
@@ -86,10 +86,21 @@ export default function Contact({ hideHeader = false }) {
               <span className="contact__icon" aria-hidden="true">🕐</span>
               <div>
                 <strong>Hours</strong>
-                <p>Mon – Sat: 8am – 7pm · Sun: 9am – 4pm</p>
+                <p>Mon – Sat: 10am – 5pm · Sun: off</p>
               </div>
             </li>
           </ul>
+          <div className="contact__map" style={{marginTop:30}}>
+            <iframe
+              title="Aya Center Location"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d192.08983547379506!2d88.29754078100454!3d22.63994705045624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1779868216599!5m2!1sen!2sin"
+              frameBorder="0"
+              allowFullScreen=""
+              width="100%"
+              height="250"
+              zoom="-50"
+            />
+          </div>
         </div>
 
         <form className="contact__form" onSubmit={handleSubmit}>
