@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './About.css'
 import './SectionCta.css'
+import aboutImg from '../assets/aboutImage.png'
 
 const values = [
   {
@@ -27,13 +28,13 @@ export default function About({ hideHeader = false, compact = false, viewAllTo }
         <div className="about__media">
           <div className="about__frame">
             <div className="about__image-placeholder">
-              <span>ॐ</span>
-              <p>Sanctuary of stillness</p>
+              {/* <span>ॐ</span>
+              <p>Sanctuary of stillness</p> */}
             </div>
           </div>
           <div className="about__badge">
-            <span>Certified</span>
-            <strong>Ayurvedic Practitioners</strong>
+            <span>Bringing trusted </span>
+            <strong>Nannies & Support Staff</strong>
           </div>
         </div>
 
@@ -42,26 +43,29 @@ export default function About({ hideHeader = false, compact = false, viewAllTo }
             <>
               <span className="section-label">About Us</span>
               <h2 className="section-title">
-                Where ancient wisdom meets modern wellness
+                Journey of Caregiving Excellence.
               </h2>
             </>
           )}
           <p className="section-desc about__lead">
-            Aya Center is a serene retreat dedicated to the timeless science of
-            Ayurveda. Founded in 2010, we help guests uncover their natural state
-            of balance through consultation, detox, and restorative therapies.
+            For years, our Aya Center has been a trusted source of compassionate caregiving, 
+            offering dedicated support to babies, mothers, families, and those in need of 
+            reliable household help. Rooted in tradition and care, we have built strong 
+            relationships offline, ensuring every family receives personalized attention 
+            and trusted assistance.
           </p>
           <p className="about__text">
-            Our practitioners combine decades of clinical experience with a warm,
-            nurturing environment — so every visit feels like coming home to yourself.
-            From first-time visitors to long-term wellness members, everyone receives
-            care shaped by their unique dosha and seasonal needs.
+            From this year, we are proud to extend our services online — making it easier for 
+            families to connect with experienced caregivers, nannies, and support staff from 
+            the comfort of their homes. Whether you need nurturing care for your child, support 
+            for new mothers, or dependable household help, our Aya Center is committed to providing 
+            holistic assistance that blends cultural values with modern convenience.
           </p>
           {!compact && (
             <p className="about__text">
-              Today we welcome guests from across the region for day visits, weekend
-              retreats, and extended Panchakarma programs — all held in tranquil
-              treatment rooms surrounded by herb gardens and quiet meditation spaces.
+              We believe caregiving is more than a service — it is a bond of trust, empathy, and 
+              dedication. Our mission is to bring peace of mind to families by offering reliable, 
+              professional, and heartfelt support both offline and online.
             </p>
           )}
 
@@ -81,12 +85,15 @@ export default function About({ hideHeader = false, compact = false, viewAllTo }
 
           {compact && (
             <ul className="about__values about__values--compact">
-              {values.map((item) => (
+              {/* {values.map((item) => (
                 <li key={item.title}>
                   <span aria-hidden="true">{item.icon}</span>
                   <span>{item.title}</span>
                 </li>
-              ))}
+              ))} */}
+              <li>
+                <i>“Bringing trusted caregiving from offline roots to an online future — dedicated to babies, mothers, families, and holistic support.”</i>
+              </li>
             </ul>
           )}
 

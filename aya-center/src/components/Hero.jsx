@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
 import { banners } from '../data/banners'
+import bedriddenPatientIcon from '../assets/Bedridden-Patient.png'
+import elderlyCareIcon from '../assets/Elderly-Care.png'
+import icuTrainedAyaIcon from '../assets/ICU-Trained-Aya.png'
+import postOperativeCareIcon from '../assets/Post-Operative.png'
 import './Hero.css'
 
 export default function Hero() {
@@ -18,15 +22,14 @@ export default function Hero() {
 
       <div className="container hero__grid">
         <div className="hero__content">
-          <p className="hero__eyebrow">Authentic Ayurveda · Since 2010</p>
+          <p className="hero__eyebrow">Trusted Aya & Care Giving Center</p>
           <h1 className="hero__title">
-            Restore balance.
+            Compassionate Aya Care
             <br />
-            <em>Renew your life.</em>
+            <em>for every individual support.</em>
           </h1>
           <p className="hero__text">
-            At Aya Center, ancient wisdom meets compassionate care. Personalized
-            treatments for detox, rejuvenation, and lasting wellness.
+            Trusted care for babies, mothers, and families — offering compassionate support, guidance, and holistic help for every stage of life. Nurturing wellness with experience, empathy, and dedication.
           </p>
           <div className="hero__actions">
             <Link to="/contact" className="btn btn-primary">
@@ -36,7 +39,7 @@ export default function Hero() {
               Explore Services
             </Link>
           </div>
-          <dl className="hero__stats">
+          {/* <dl className="hero__stats">
             <div>
               <dt>15+</dt>
               <dd>Years of healing</dd>
@@ -49,16 +52,32 @@ export default function Hero() {
               <dt>40+</dt>
               <dd>Therapies offered</dd>
             </div>
-          </dl>
+          </dl> */}
+          <div className="service_icons">
+            <ul>
+              <li>
+                <img src={elderlyCareIcon} alt="Elderly Care Icon" />
+                <span>Elderly Care</span>
+              </li>
+              <li>
+                <img src={bedriddenPatientIcon} alt="Bedridden Patient Icon" />
+                <span>Bedridden Patient</span>
+              </li>
+              <li>
+                <img src={icuTrainedAyaIcon} alt="ICU Trained Aya Icon" />
+                <span>ICU Trained Aya</span>
+              </li>   
+              <li>
+                <img src={postOperativeCareIcon} alt="Post-Operative Care Icon" />
+                <span>Post-Operative</span>
+              </li>   
+            </ul>
+          </div>
         </div>
 
         <div className="hero__visual">
           <div className="hero__card hero__card--main">
-            <div className="hero__card-inner">
-              <span className="hero__card-icon">☸</span>
-              <h3>Holistic Healing</h3>
-              <p>Mind · Body · Spirit</p>
-            </div>
+            
           </div>
           <div className="hero__card hero__card--float">
             <span className="hero__float-label">Today&apos;s focus</span>

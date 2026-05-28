@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import EnquireModal from './EnquireModal'
 import './Header.css'
-import logo from '../assets/LGAC-logo.png'
+import logo from '../assets/LGAC-logo4.png'
 
 const navLinks = [
   { to: '/about', label: 'About' },
