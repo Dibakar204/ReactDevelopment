@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block sensitive or duplicate paths (adjust if needed)
+Disallow: /services/
+Disallow: /treatments/
+Disallow: /stories/
+Disallow: /contact/
+
+# Point crawlers to your sitemap
+Sitemap: https://laxmiganeshayacentre.vercel.app/sitemap.xml
